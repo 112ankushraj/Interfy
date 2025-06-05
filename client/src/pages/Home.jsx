@@ -13,7 +13,7 @@ import Footer from "./Footer";
 import About from "./About";
 import Contacted from "./Contacted";
 import { FaCertificate } from "react-icons/fa";
-import Certificate from "../components/Certificate";
+// import Certificate from "../components/Certificate";
 
 
 const Home = () => {
