@@ -7,6 +7,8 @@ import Contact from "./pages/Contacted"
 
 
 import About from "./pages/About";
+import VerifyCertificate from "./pages/Certificate/VerifyCertificate";
+import CreateCertificate from "./pages/Certificate/CreateCertificate";
 
 
 
@@ -22,9 +24,10 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/internship" element={<Internship />} />
-          <Route path="/verification" element={<Verification />} />
+          <Route path="/verification" element={<VerifyCertificate />} />
           <Route path="/contactus" element={<Contact/>} />
           <Route path="/about" element={<About/>} />
+          <Route path="/certificate/create" element={<CreateCertificate/>} />
         </Routes>
       </div>
     </>
