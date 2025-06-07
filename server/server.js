@@ -1,6 +1,7 @@
 import express from "express"
 import connectDB from "./Configs/config.js";
-import certificateRoutes from "./Routes/certificateRoutes.js";
+import certificateRouter from "./Routes/certificateRoutes.js";
+import contactRouter from "./Routes/contactRoutes.js";
 
 import cors from "cors"
 import dotenv from "dotenv";
@@ -17,7 +18,9 @@ app.use(cors({
 
 
 
-app.use("/api/certificate/", certificateRoutes);
+app.use("/api/certificate/", certificateRouter);
+
+app.use("/api/contact/", contactRouter);
 
 
 app.listen(PORT , () => {
