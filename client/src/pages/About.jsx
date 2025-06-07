@@ -10,7 +10,7 @@ const About = () => {
           {/* Image Section */}
           <div className="flex-1 w-full">
             <img
-              src="/image/banner.jpg"
+              src="/image/about2.png"
               alt="About banner"
               className="rounded-xl w-full shadow-md"
             />
@@ -25,18 +25,20 @@ const About = () => {
               WHY CHOOSE <span className="text-yellow-400">US ?</span>
             </h2>
             <p className="text-gray-700 leading-relaxed">
-              CodeAlpha leads in Ed-Tech, the country's fastest-growing
-              professional training platform. We're focused on shaping future
-              tech creators. Our top-rated internships and certifications
-              deliver powerful results:
+              Internfy: Empowering Future Innovators Join the fastest-growing
+              Ed-Tech platform in the country, where learning meets opportunity.
+              At Internfy, we’re committed to shaping tomorrow’s tech leaders
+              through hands-on, industry-ready experiences.
               <br />
-              <strong>• 129,000+ students</strong> have completed internships.
+              <strong>• 129+ students</strong> have completed impactful
+              internships.
               <br />
               <strong>• 95% certified learners</strong> gained practical skills.
               <br />
-              Learn by doing: real projects, real growth. Flexible learning,
-              strong alumni network, job support, and partnerships with top tech
-              firms—all here to build your success story.
+              Work on real projects, grow with flexible learning, and access
+              top-tier job support. With a strong alumni network and
+              partnerships with leading tech companies, Internfy is where your
+              success begins.
             </p>
 
             <ul className="space-y-2">
@@ -54,8 +56,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      
     </>
   );
 };

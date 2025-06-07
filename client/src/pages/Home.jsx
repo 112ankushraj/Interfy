@@ -15,7 +15,6 @@ import Contacted from "./Contacted";
 import { FaCertificate } from "react-icons/fa";
 // import Certificate from "../components/Certificate";
 
-
 const Home = () => {
   return (
     <>
@@ -23,22 +22,22 @@ const Home = () => {
         <section
           id="home"
           className="w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
-          style={{ backgroundImage: "url('/image/bgc.jpg')" }}
+          style={{ backgroundImage: "url('/image/newbg.jpg')" }}
         >
           {/* Overlay for text readability */}
-          <div className="w-full min-h-screen bg-white/90 flex items-center">
+          <div className="w-full min-h-screen flex items-center">
             <div className="container mx-auto px-4 py-16 lg:py-24 flex flex-col-reverse lg:flex-row items-center justify-between gap-12">
               {/* Text Content */}
-              <div className="text-black max-w-xl text-center lg:text-left space-y-6">
+              <div className="text-white max-w-xl text-center lg:text-left space-y-6">
                 <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                   Practice your <span className="text-yellow-400">skills</span>
                 </h1>
-                <p className="text-lg md:text-2xl text-gray-700">
+                <p className="text-lg md:text-2xl text-gray-300">
                   Lay the foundation for your future prospects and dreams with
                   the skills for excellence with <strong>Internfy</strong>.
                 </p>
                 <a
-                  href="https://forms.gle/s9TW7Tqi3tAQLCu78"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSetbDpB0M2hyM6ZXDnFvR8iJ8Iwuu614uKIzG_bJ9uDMeeshA/viewform?usp=preview"
                   className="inline-flex items-center gap-2 bg-yellow-400 hover:bg-yellow-500 text-black px-6 py-3 rounded-xl font-semibold transition shadow"
                 >
                   Apply Internship
@@ -73,17 +72,17 @@ const Home = () => {
               {[
                 {
                   title: "Web Development Internship",
-                  students: "70.05K+",
+                  students: "100+",
                   img: "/image/program2.jpg",
                 },
                 {
-                  title: "App Development Internship",
-                  students: "30.09K+",
-                  img: "/image/program1.jpg",
+                  title: "Python Programming Internship",
+                  students: "70+",
+                  img: "/image/py.png",
                 },
                 {
                   title: "Java Development Internship",
-                  students: "40.45K+",
+                  students: "100+",
                   img: "/image/program3.png",
                 },
               ].map(({ title, students, img }, i) => (
@@ -94,7 +93,7 @@ const Home = () => {
                   <img
                     src={img}
                     alt={title}
-                    className="w-full h-48 object-cover"
+                    className="w-full h-65 object-cover"
                   />
                   <div className="p-6">
                     <div className="flex items-center gap-2 mb-2 text-sm text-gray-500">
@@ -105,7 +104,7 @@ const Home = () => {
                     </span>
                     <h3 className="text-lg font-semibold mb-4">{title}</h3>
                     <a
-                      href="https://forms.gle/s9TW7Tqi3tAQLCu78"
+                      href="https://docs.google.com/forms/d/e/1FAIpQLSetbDpB0M2hyM6ZXDnFvR8iJ8Iwuu614uKIzG_bJ9uDMeeshA/viewform?usp=preview"
                       className="inline-block bg-yellow-400 hover:bg-yellow-500 text-black px-4 py-2 rounded-xl font-medium transition"
                     >
                       Register
@@ -138,10 +137,10 @@ const Home = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
             {[
-              ["257.25K+", "Registrations"],
-              ["160.69K+", "Participants"],
-              ["99.92%", "Satisfaction Rate"],
-              ["23+", "Countries"],
+              ["500+", "Registrations"],
+              ["300+", "Participants"],
+              ["70%", "Satisfaction Rate"],
+              ["20+", "State"],
             ].map(([value, label], i) => (
               <div key={i} className="bg-yellow-50 p-6 rounded-xl">
                 <h3 className="text-2xl font-bold text-yellow-500">{value}</h3>
@@ -177,23 +176,8 @@ const Home = () => {
             </div>
           </div>
         </section>
-
-        
       </div>
-      <Contacted/>
-     
-    
-     
-
-      
-
-      
-
-      
-     
-
-
-      
+      <Contacted />
     </>
   );
 };

@@ -18,8 +18,9 @@ function Navbar() {
           className="flex items-center space-x-2"
         >
           <img
+          id="home"
               
-            src="/image/logointern-new.png"
+            src="/image/final logo.png"
             alt="logo"
             className="h-25 w-auto"
           /> 
@@ -49,7 +50,7 @@ function Navbar() {
 
         {/* Right: Enroll Button */}
         <a
-          href="https://forms.gle/s9TW7Tqi3tAQLCu78"
+          href="https://docs.google.com/forms/d/e/1FAIpQLSetbDpB0M2hyM6ZXDnFvR8iJ8Iwuu614uKIzG_bJ9uDMeeshA/viewform?usp=preview"
           target="_blank"
           rel="noopener noreferrer"
           className="hidden lg:flex items-center gap-2 bg-[#0062FF] text-white font-semibold text-lg px-5 py-2 rounded-lg max-w-max overflow-hidden hover:brightness-110 transition"
@@ -88,7 +89,7 @@ function Navbar() {
           ))}
 
           <a
-            href="https://forms.gle/s9TW7Tqi3tAQLCu78"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSetbDpB0M2hyM6ZXDnFvR8iJ8Iwuu614uKIzG_bJ9uDMeeshA/viewform?usp=preview"
             target="_blank"
             rel="noopener noreferrer"
             className="block bg-blue-600 text-white text-center px-4 py-2 rounded-md hover:bg-blue-700"
