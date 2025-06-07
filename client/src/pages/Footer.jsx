@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaLinkedin, FaTwitterSquare, FaYoutubeSquare, FaTelegram, FaWhatsapp } from 'react-icons/fa';
+import { FaLinkedin, FaTwitterSquare, FaYoutubeSquare, FaTelegram, FaWhatsapp, FaInstagramSquare } from 'react-icons/fa';
 // import Resume from '../../assets/docs/resume.pdf'
   import term from '../assets/docs/t&c.pdf'
 
@@ -30,7 +30,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://forms.gle/s9TW7Tqi3tAQLCu78" className="hover:text-white hover:pl-2 transition-all duration-300">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSetbDpB0M2hyM6ZXDnFvR8iJ8Iwuu614uKIzG_bJ9uDMeeshA/viewform?usp=preview" className="hover:text-white hover:pl-2 transition-all duration-300">
                  Affiliate Program
                 </a>
               </li>
@@ -66,7 +66,7 @@ export default function Footer() {
                 </a>
               </li>
               <li>
-                <a href="https://forms.gle/s9TW7Tqi3tAQLCu78" className="hover:text-white hover:pl-2 transition-all duration-300">
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSetbDpB0M2hyM6ZXDnFvR8iJ8Iwuu614uKIzG_bJ9uDMeeshA/viewform?usp=preview" className="hover:text-white hover:pl-2 transition-all duration-300">
                  Online Courses
                 </a>
               </li>
@@ -80,7 +80,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="" className="hover:text-white hover:pl-2 transition-all duration-300">
+                <a href="home" className="hover:text-white hover:pl-2 transition-all duration-300">
                   Privacy Policy
                 </a>
               </li>
@@ -92,12 +92,12 @@ export default function Footer() {
                
               </li>
               <li>
-                <a href="" className="hover:text-white hover:pl-2 transition-all duration-300">
+                <a href="https://wa.me/918757614978" className="hover:text-white hover:pl-2 transition-all duration-300">
                  Live Chat
                 </a>
               </li>
               <li>
-                <a href="" className="hover:text-white hover:pl-2 transition-all duration-300">
+                <a href="https://wa.me/918757614978" className="hover:text-white hover:pl-2 transition-all duration-300">
                  FAQ
                 </a>
               </li>
@@ -111,19 +111,19 @@ export default function Footer() {
               Follow Us
             </h4>
             <div className="flex space-x-4 flex-wrap">
-              <a href="https://www.linkedin.com/company/codealpha" className="hover:bg-red-600 p-2 rounded-full transition">
+              <a href="https://www.linkedin.com/company/107644723/admin/dashboard/" className="hover:bg-red-600 p-2 rounded-full transition">
                 <FaLinkedin size={30} />
               </a>
-              <a href="https://www.linkedin.com/company/codealpha" className="hover:bg-red-600 p-2 rounded-full transition">
-                <FaTwitterSquare size={30} />
+              <a href="https://www.instagram.com/internfy.in/" className="hover:bg-red-600 p-2 rounded-full transition">
+                <FaInstagramSquare size={30} />
               </a>
-              <a href="#" className="hover:bg-red-600 p-2 rounded-full transition">
+              <a href="https://www.youtube.com/@Internfy" className="hover:bg-red-600 p-2 rounded-full transition">
                 <FaYoutubeSquare size={30} />
               </a>
               <a href="https://t.me/CodeAlphaOfficial" className="hover:bg-red-600 p-2 rounded-full transition">
                 <FaTelegram size={30} />
               </a>
-              <a href="https://wa.me/codealpha" className="hover:bg-red-600 p-2 rounded-full transition">
+              <a href="https://wa.me/918757614978" className="hover:bg-red-600 p-2 rounded-full transition">
                 <FaWhatsapp size={30} />
               </a>
             </div>
