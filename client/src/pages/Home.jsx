@@ -166,7 +166,7 @@ const Home = () => {
                 className="rounded-xl w-full max-w-4xl mx-auto"
               />
               <a
-                href="https://youtu.be/jLRZ1Sod_hA?si=n4WkdruA6iuRQ-dP"
+                href="https://www.youtube.com/@Internfy"
                 className="absolute inset-0 flex items-center justify-center"
               >
                 <button className="bg-yellow-400 p-4 rounded-full shadow-lg hover:bg-yellow-500 transition">
