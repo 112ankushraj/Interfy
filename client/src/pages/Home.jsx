@@ -46,13 +46,13 @@ const Home = () => {
               </div>
 
               {/* Image Content */}
-              <div className="flex justify-center lg:justify-end">
+              {/* <div className="flex justify-center lg:justify-end">
                 <img
                   src="/image/side.jpg"
                   alt="Hero Banner"
                   className="w-full max-w-sm rounded-2xl shadow-xl"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
