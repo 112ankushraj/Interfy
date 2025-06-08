@@ -168,7 +168,7 @@ const Contacted = () => {
                 <div>
                   <button
                     type="submit"
-                    className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 rounded-lg transition"
+                    className="w-full bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-3 rounded-lg transition cursor-pointer"
                   >
                     Submit
                   </button>

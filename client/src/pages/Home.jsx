@@ -46,13 +46,13 @@ const Home = () => {
               </div>
 
               {/* Image Content */}
-              <div className="flex justify-center lg:justify-end">
+              {/* <div className="flex justify-center lg:justify-end">
                 <img
                   src="/image/side.jpg"
                   alt="Hero Banner"
                   className="w-full max-w-sm rounded-2xl shadow-xl"
                 />
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -166,7 +166,7 @@ const Home = () => {
                 className="rounded-xl w-full max-w-4xl mx-auto"
               />
               <a
-                href="https://youtu.be/jLRZ1Sod_hA?si=n4WkdruA6iuRQ-dP"
+                href="https://www.youtube.com/@Internfy"
                 className="absolute inset-0 flex items-center justify-center"
               >
                 <button className="bg-yellow-400 p-4 rounded-full shadow-lg hover:bg-yellow-500 transition">

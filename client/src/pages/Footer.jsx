@@ -80,7 +80,7 @@ export default function Footer() {
             </h4>
             <ul className="space-y-3 text-gray-400">
               <li>
-                <a href="home" className="hover:text-white hover:pl-2 transition-all duration-300">
+                <a href="" className="hover:text-white hover:pl-2 transition-all duration-300">
                   Privacy Policy
                 </a>
               </li>
