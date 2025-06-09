@@ -6,6 +6,17 @@ pipeline {
     }
 
     stages {
+        stage('Clone Latest Code') {
+            steps {
+                checkout([
+                    $class: 'GitSCM',
+                    branches: [[name: '*/main']],
+                    userRemoteConfigs: [[url: 'https://github.com/112ankushraj/Interfy.git']],
+                    extensions: [[$class: 'CleanBeforeCheckout']]
+                ])
+            }
+        }
+
         stage('Install Dependencies') {
             steps {
                 dir('client') {
