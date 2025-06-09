@@ -11,7 +11,7 @@ jobs:
     steps:
       - name: 🚀 Trigger Jenkins Job
         run: |
-          curl -X POST "https://jenkins.aakash1z.online:8080/job/internfy-client/build?token=deployfromgithub"
+          curl -X POST "https://jenkins.aakash1z.online/job/internfy-client/build?token=deployfromgithub"
         env:
           JENKINS_URL: https://jenkins.aakash1z.online
           JENKINS_USER: aakash
