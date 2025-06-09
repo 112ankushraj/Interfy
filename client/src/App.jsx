@@ -9,6 +9,7 @@ import VerifyCertificate from "./pages/Certificate/VerifyCertificate";
 import CreateCertificate from "./pages/Certificate/CreateCertificate";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css"
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 
 
@@ -28,6 +29,7 @@ function App() {
           <Route path="/contactus" element={<Contact/>} />
           <Route path="/about" element={<About/>} />
           <Route path="/certificate/create" element={<CreateCertificate/>} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy/>} />
         </Routes>
         <ToastContainer position="top-right" autoClose={3000}/>
       </div>

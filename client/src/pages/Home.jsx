@@ -178,6 +178,7 @@ const Home = () => {
         </section>
       </div>
       <Contacted />
+      
     </>
   );
 };
