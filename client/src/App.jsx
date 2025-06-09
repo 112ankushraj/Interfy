@@ -11,6 +11,7 @@ import Course from "./components/Course";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer"
+import PrivacyPolicy from "./pages/PrivacyPolicy";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
           <Route path="/verification" element={<VerifyCertificate />} />
           <Route path="/contactus" element={<Contact />} />
           <Route path="/about" element={<About />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/certificate/create" element={<CreateCertificate />} />
         </Routes>
         <ToastContainer position="top-right" autoClose={3000} />
