@@ -77,7 +77,7 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="bg-white shadow-md fixed w-full z-50">
+    <nav className="bg-blue-400 shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Logo closeMenu={closeMenu} />
         <NavMenu
@@ -85,7 +85,7 @@ function Navbar() {
           classname="hidden lg:flex space-x-20 text-2xl"
         />
         <EnrollButton className="hidden lg:flex items-center gap-2 bg-[#0062FF] text-white font-semibold text-lg px-5 py-2 rounded-lg max-w-max overflow-hidden hover:brightness-110 transition" />
-        <ToggleButton toggleMenu={toggleMenu} setMenuOpen={setMenuOpen} />
+        <ToggleButton toggleMenu={toggleMenu} setMenuOpen={setMenuOpen  } />
       </div>
 
       {menuOpen && (
