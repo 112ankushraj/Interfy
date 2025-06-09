@@ -1,8 +1,7 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
-import Footer from "./Footer";
 
-const About = () => {
+export default function About() {
   return (
     <>
       <section id="about" className="py-20 bg-white text-gray-800">
@@ -58,6 +57,4 @@ const About = () => {
       </section>
     </>
   );
-};
-
-export default About;
+}

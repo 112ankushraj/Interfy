@@ -1,6 +1,5 @@
 import React from "react";
 import { Clock, Book, Users, ArrowRight } from "lucide-react";
-import Footer from "./Footer";
 
 const courses = [
   {
@@ -37,7 +36,7 @@ const courses = [
   },
 ];
 
-const CoursesSection = () => {
+export default function Course(){
   return (
     <>
       <section id="courses" className="py-20 bg-gray-50">
@@ -88,9 +87,7 @@ const CoursesSection = () => {
         </div>
       </section>
 
-      <Footer />
     </>
   );
 };
 
-export default CoursesSection;

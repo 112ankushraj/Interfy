@@ -16,7 +16,14 @@ app.use(cors({
     credentials : true , 
 }));
 
-
+// ✅ Add this root welcome route
+app.get("/", (req, res) => {
+    res.json({
+      message: "👋 Welcome to the Internify backend API!",
+      status: "success",
+      version: "1.0.0"
+    });
+  });
 
 app.use("/api/certificate/", certificateRouter);
 

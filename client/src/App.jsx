@@ -1,36 +1,35 @@
 import { Routes, Route } from "react-router-dom";
-import Navbar from "./components/Navbar";
-import Home from "./pages/Home";
-import Internship from "./pages/Internship";
-import Verification from "./pages/Verification";
-import Contact from "./pages/Contacted"
-import About from "./pages/About";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+
 import VerifyCertificate from "./pages/Certificate/VerifyCertificate";
 import CreateCertificate from "./pages/Certificate/CreateCertificate";
-import { ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css"
 
-
-
+import Home from "./pages/Home";
+import Navbar from "./components/Navbar";
+import Course from "./components/Course";
+import About from "./components/About";
+import Contact from "./components/Contact";
+import Footer from "./components/Footer"
 
 function App() {
   return (
     <>
       <Navbar />
-      
+
       <div className="pt-20">
-        {" "}
-        {/* Push content below fixed navbar */}
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/internship" element={<Internship />} />
+          <Route path="/internship" element={<Course />} />
           <Route path="/verification" element={<VerifyCertificate />} />
-          <Route path="/contactus" element={<Contact/>} />
-          <Route path="/about" element={<About/>} />
-          <Route path="/certificate/create" element={<CreateCertificate/>} />
+          <Route path="/contactus" element={<Contact />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/certificate/create" element={<CreateCertificate />} />
         </Routes>
-        <ToastContainer position="top-right" autoClose={3000}/>
+        <ToastContainer position="top-right" autoClose={3000} />
       </div>
+      <Footer/>
+
     </>
   );
 }

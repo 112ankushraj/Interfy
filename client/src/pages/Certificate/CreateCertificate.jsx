@@ -9,6 +9,7 @@ export default function CreateCertificate() {
     certificationNo: '',
     startingDate: '',
     awardDate: '',
+    adminKey: '',
   });
 
   const [message, setMessage] = useState({ type: '', text: '' });
@@ -22,7 +23,7 @@ export default function CreateCertificate() {
     e.preventDefault();
     setMessage({ type: '', text: '' });
 
-    const { studentName, domain, duration, certificationNo, startingDate, awardDate } = formData;
+    const { studentName, domain, duration, certificationNo, startingDate, awardDate, adminKey } = formData;
 
     // Basic validation
     if (!studentName || !domain || !duration || !certificationNo || !startingDate || !awardDate) {
@@ -32,6 +33,7 @@ export default function CreateCertificate() {
 
     try {
       setLoading(true);
+      console.log(formData)
       await axios.post('/certificate/create', formData);
       setMessage({ type: 'success', text: 'Certificate created successfully!' });
       setFormData({
