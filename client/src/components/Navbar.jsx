@@ -77,7 +77,7 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="bg-blue-400 shadow-md fixed w-full z-50">
+    <nav className="bg-green-400 shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Logo closeMenu={closeMenu} />
         <NavMenu
