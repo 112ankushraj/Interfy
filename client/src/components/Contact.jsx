@@ -142,7 +142,7 @@ function CompnayInfo(){
         <span className="text-2xl">📞</span>
         <div>
           <h3 className="font-semibold text-xl">Contact Number</h3>
-          <p>+91 8102668655</p>
+          <p>+91 8757614978</p>
         </div>
       </li>
 

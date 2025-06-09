@@ -112,7 +112,7 @@ function QuickList() {
       <ul className="space-y-3 text-gray-400">
         <li>
           <a
-            href=""
+            href="/privacy-policy"
             className="hover:text-white hover:pl-2 transition-all duration-300"
           >
             Privacy Policy
@@ -173,7 +173,7 @@ function SocialMedia() {
           <FaYoutubeSquare size={30} />
         </a>
         <a
-          href="https://t.me/CodeAlphaOfficial"
+          href="https://t.me/+dfBaEcU0eNJjNTVl"
           className="hover:bg-red-600 p-2 rounded-full transition"
         >
           <FaTelegram size={30} />
