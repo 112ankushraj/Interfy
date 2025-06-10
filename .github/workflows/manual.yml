@@ -9,10 +9,16 @@ jobs:
   trigger-jenkins:
     runs-on: ubuntu-latest
     steps:
-      - name: 🚀 Trigger Jenkins Job
-        run: |
-          curl -X POST "https://jenkins.aakash1z.online/job/internfy-client/build?token=deployfromgithub"
+      - name: 🚀 Trigger Jenkins Job Securely
         env:
           JENKINS_URL: https://jenkins.aakash1z.online
           JENKINS_USER: aakash
-          JENKINS_API_TOKEN: 11fd9fadefe223aa6a577e942da1cd7e52
+          JENKINS_API_TOKEN: ${{ secrets.JENKINS_API_TOKEN }}
+        run: |
+          # Get the crumb
+          CRUMB=$(curl -s --user "$JENKINS_USER:$JENKINS_API_TOKEN" "$JENKINS_URL/crumbIssuer/api/xml?xpath=concat(//crumbRequestField,\":\",//crumb)")
+
+          # Trigger Jenkins build with the crumb
+          curl -X POST "$JENKINS_URL/job/internfy-client/build" \
+            --user "$JENKINS_USER:$JENKINS_API_TOKEN" \
+            -H "$CRUMB"
