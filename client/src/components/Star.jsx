@@ -1,5 +1,11 @@
+import { Helmet } from 'react-helmet';
 export default function Star() {
   return (
+    <>  
+    <Helmet>
+        <title>Star - Internfy</title>
+        <meta name="description" content="Discover key statistics about Internfy, including registrations, participation rates, user satisfaction, and regional reach." />
+      </Helmet>
     <section className="py-20 bg-white">
       <div className="container mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
         {[
@@ -15,5 +21,6 @@ export default function Star() {
         ))}
       </div>
     </section>
+    </>
   );
 }

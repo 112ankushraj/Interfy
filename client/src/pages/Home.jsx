@@ -1,4 +1,4 @@
-import React from "react";
+import React  from "react";
 
 import About from "../components/About";
 import Star from "../components/Star";
@@ -7,16 +7,20 @@ import Contact from "../components/Contact";
 import Course from "../components/Course";
 
 
+
 const Home = () => {
   return (
     <>
       <div>
         <Hero />
+
         <About />
         <Course />
         <Star />
         <Contact />
       </div>
+
+      
     </>
   );
 };

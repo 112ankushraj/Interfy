@@ -1,8 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { IoMenuOutline, IoCloseOutline } from "react-icons/io5";
-
-
+import { Helmet } from 'react-helmet';
 
 function Logo({ closeMenu }) {
   return (
@@ -77,6 +76,11 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
+    <>  
+     <Helmet>
+        <title>Navbar - Internfy</title>
+        <meta name="description" content="Navigate through Internfy's platform seamlessly. Access internship listings, company profiles, and your dashboard all from one place." />
+      </Helmet>
     <nav className="bg-white shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Logo closeMenu={closeMenu} />
@@ -85,7 +89,7 @@ function Navbar() {
           classname="hidden lg:flex space-x-20 text-2xl"
         />
         <EnrollButton className="hidden lg:flex items-center gap-2 bg-[#0062FF] text-white font-semibold text-lg px-5 py-2 rounded-lg max-w-max overflow-hidden hover:brightness-110 transition hover:bg-green-500" />
-        <ToggleButton toggleMenu={toggleMenu} setMenuOpen={setMenuOpen  } />
+        <ToggleButton toggleMenu={toggleMenu} setMenuOpen={setMenuOpen} />
       </div>
 
       {menuOpen && (
@@ -97,8 +101,7 @@ function Navbar() {
         </NavMenu>
       )}
     </nav>
+    </>
   );
 }
 export default Navbar;
-
-

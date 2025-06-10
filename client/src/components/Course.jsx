@@ -1,5 +1,6 @@
 import React from "react";
 import { Clock, Book, Users, ArrowRight } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 const courses = [
   {
@@ -39,6 +40,13 @@ const courses = [
 export default function Course() {
   return (
     <>
+      <Helmet>
+        <title>Course - Internfy</title>
+        <meta
+          name="description"
+          content="Explore Internfy's curated courses designed to boost your skills and prepare you for top internships and job opportunities."
+        />
+      </Helmet>
       <section id="courses" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <p className="text-yellow-500 text-center uppercase font-semibold">
