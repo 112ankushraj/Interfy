@@ -34,7 +34,7 @@ function ToggleButton({ toggleMenu, menuOpen }) {
   return (
     <button
       onClick={toggleMenu}
-      className="lg:hidden text-3xl text-gray-800"
+      className="lg:hidden text-3xl text-gray-800 "
       aria-label="Toggle Menu"
     >
       {menuOpen ? <IoCloseOutline /> : <IoMenuOutline />}
@@ -77,14 +77,14 @@ function Navbar() {
   const closeMenu = () => setMenuOpen(false);
 
   return (
-    <nav className="bg-green-400 shadow-md fixed w-full z-50">
+    <nav className="bg-white shadow-md fixed w-full z-50">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
         <Logo closeMenu={closeMenu} />
         <NavMenu
           closeMenu={closeMenu}
           classname="hidden lg:flex space-x-20 text-2xl"
         />
-        <EnrollButton className="hidden lg:flex items-center gap-2 bg-[#0062FF] text-white font-semibold text-lg px-5 py-2 rounded-lg max-w-max overflow-hidden hover:brightness-110 transition" />
+        <EnrollButton className="hidden lg:flex items-center gap-2 bg-[#0062FF] text-white font-semibold text-lg px-5 py-2 rounded-lg max-w-max overflow-hidden hover:brightness-110 transition hover:bg-green-500" />
         <ToggleButton toggleMenu={toggleMenu} setMenuOpen={setMenuOpen  } />
       </div>
 
@@ -93,10 +93,12 @@ function Navbar() {
           closeMenu={closeMenu}
           classname="lg:hidden bg-white shadow-md px-6 py-4 space-y-4"
         >
-          <EnrollButton className="bg-green-600 text-black text-center px-4 py-2 rounded-md hover:bg-blue-700" />
+          <EnrollButton className="bg-blue-600  text-black text-center px-4 py-2 rounded-md hover:bg-green-500" />
         </NavMenu>
       )}
     </nav>
   );
 }
 export default Navbar;
+
+
