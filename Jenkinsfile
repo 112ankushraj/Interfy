@@ -1,19 +1,18 @@
 pipeline {
     agent any
 
+    tools {
+        nodejs "nodejs" // Ensure you've configured this in Jenkins Global Tools
+    }
+
     environment {
-        DEPLOY_DIR = '/var/www/test.aakash1z.online'
+        DEPLOY_DIR = '/var/www/internfy.in'
     }
 
     stages {
-        stage('Clone Latest Code') {
+        stage('Checkout Code') {
             steps {
-                checkout([
-                    $class: 'GitSCM',
-                    branches: [[name: '*/main']],
-                    userRemoteConfigs: [[url: 'https://github.com/112ankushraj/Interfy.git']],
-                    extensions: [[$class: 'CleanBeforeCheckout']]
-                ])
+                git url: "https://github.com/112ankushraj/Interfy.git", branch: "main"
             }
         }
 
@@ -35,19 +34,24 @@ pipeline {
 
         stage('Deploy to Nginx') {
             steps {
+                // Clean deploy directory
                 sh 'sudo rm -rf $DEPLOY_DIR/*'
+
+                // Copy build output
                 sh 'sudo cp -r client/dist/* $DEPLOY_DIR/'
-                sh 'sudo systemctl reload nginx'
+
+                // Reload Nginx to reflect changes
+                sh 'sudo /bin/systemctl reload nginx'
             }
         }
     }
 
     post {
         success {
-            echo '✅ Deployed from Jenkinsfile in repo!'
+            echo '✅ Deployed successfully from Jenkins!'
         }
         failure {
-            echo '❌ Something went wrong.'
+            echo '❌ Build or deployment failed. Please check logs.'
         }
     }
 }
