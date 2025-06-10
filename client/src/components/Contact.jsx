@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "../axios/AxiosInstance";
+import { Helmet } from 'react-helmet';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -162,6 +163,10 @@ export default function Contact() {
 
   return (
     <>
+    <Helmet>
+        <title>Contact US - Internfy</title>
+        <meta name="description" content="Get in touch with the Internfy team for any questions, partnership opportunities, or support regarding internships." />
+      </Helmet>
       <section
         id="contacts"
         className="py-20 bg-gradient-to-br from-yellow-100 via-yellow-50 to-white text-gray-800"

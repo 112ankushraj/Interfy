@@ -1,9 +1,17 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
+import { Helmet } from "react-helmet";
 
 export default function About() {
   return (
     <>
+      <Helmet>
+        <title>About Us - Internfy</title>
+        <meta
+          name="description"
+          content="Learn more about Internfy and how we help students find internships."
+        />
+      </Helmet>
       <section id="about" className="py-20 bg-white text-gray-800">
         <div className="container mx-auto px-4 flex flex-col-reverse lg:flex-row items-center gap-12">
           {/* Image Section */}
@@ -12,6 +20,7 @@ export default function About() {
               src="/image/about2.png"
               alt="About banner"
               className="rounded-xl w-full shadow-md"
+              
             />
           </div>
 
