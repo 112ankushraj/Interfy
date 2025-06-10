@@ -6,6 +6,7 @@ import Hero from "../components/Hero";
 import Contact from "../components/Contact";
 import Course from "../components/Course";
 
+
 const Home = () => {
   return (
     <>

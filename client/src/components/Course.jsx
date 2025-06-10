@@ -36,7 +36,7 @@ const courses = [
   },
 ];
 
-export default function Course(){
+export default function Course() {
   return (
     <>
       <section id="courses" className="py-20 bg-gray-50">
@@ -86,8 +86,6 @@ export default function Course(){
           </div>
         </div>
       </section>
-
     </>
   );
-};
-
+}

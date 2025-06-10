@@ -13,12 +13,14 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer"
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 
+
 function App() {
   return (
     <>
       <Navbar />
 
       <div className="pt-20">
+   
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/internship" element={<Course />} />
@@ -28,6 +30,7 @@ function App() {
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/certificate/create" element={<CreateCertificate />} />
         </Routes>
+       
         <ToastContainer position="top-right" autoClose={3000} />
       </div>
       <Footer/>
