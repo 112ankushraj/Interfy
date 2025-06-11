@@ -1,4 +1,4 @@
-import React from "react";
+
 import { Clock, Book, Users, ArrowRight } from "lucide-react";
 import { Helmet } from "react-helmet";
 
@@ -6,34 +6,34 @@ const courses = [
   {
     title: "Web Development Internship",
     students: "100+",
-    img: "/image/program2.jpg",
+    img: "/image/web_devlopment.webp",
   },
 
   {
     title: "Java Development Internship",
     students: "100+",
-    img: "/image/program3.png",
+    img: "/image/java.webp",
   },
   {
     title: "Python Programming Internship",
     students: "70+",
-    img: "/image/py.png",
+    img: "/image/python.webp",
   },
   {
     title: "C ++ Programming Internship",
     students: "150+",
-    img: "/image/c++.png",
+    img: "/image/c++.webp",
   },
   {
     title: "App Development Internship",
     students: "50+",
-    img: "/image/program1.jpg",
+    img: "/image/app_devlopment.webp",
   },
 
   {
     title: "Artificial Intelligence Internship",
     students: "50+",
-    img: "/image/program4.jpg",
+    img: "/image/ai.webp",
   },
 ];
 
