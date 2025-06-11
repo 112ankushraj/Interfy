@@ -17,10 +17,9 @@ export default function About() {
           {/* Image Section */}
           <div className="flex-1 w-full">
             <img
-              src="/image/about2.png"
+              src="/image/about.webp"
               alt="About banner"
               className="rounded-xl w-full shadow-md"
-              
             />
           </div>
 

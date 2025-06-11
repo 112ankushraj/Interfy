@@ -15,7 +15,7 @@ export default function Hero() {
       <section
         id="home"
         className="w-full min-h-screen bg-cover bg-center bg-no-repeat overflow-hidden"
-        style={{ backgroundImage: "url('/image/newbg.jpg')" }}
+        style={{ backgroundImage: "url('/image/background.webp')" }}
       >
         {/* Overlay for text readability */}
         <div className="w-full min-h-screen flex items-center">
@@ -25,9 +25,9 @@ export default function Hero() {
               <h1 className="text-4xl md:text-5xl font-bold leading-tight">
                 Practice your <span className="text-yellow-400">skills</span>
               </h1>
-              <p className="text-lg md:text-2xl text-gray-300">
-                Lay the foundation for your future prospects and dreams with the
-                skills for excellence with <strong>Internfy</strong>.
+              <p className="text-lg md:text-2xl text-gray-350 ">
+                Build a successful future with in-demand skills and real-world
+                experience — start your journey with <strong>Internfy</strong>.
               </p>
               <a
                 href="https://docs.google.com/forms/d/e/1FAIpQLSetbDpB0M2hyM6ZXDnFvR8iJ8Iwuu614uKIzG_bJ9uDMeeshA/viewform?usp=preview"
