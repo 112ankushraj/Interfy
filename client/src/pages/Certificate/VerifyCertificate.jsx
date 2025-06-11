@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import axios from "../../axios/AxiosInstance"
+import { Helmet } from 'react-helmet';
+import axios from "../../axios/AxiosInstance";
 
 export default function VerifyCertificatePage() {
   const [certNo, setCertNo] = useState('');
@@ -22,6 +23,7 @@ export default function VerifyCertificatePage() {
       const res = await axios.get(`/certificate/verify/${certNo}`);
       setCertificate(res.data);
     } catch (err) {
+      
       setError('No certificate found with this number.');
     } finally {
       setLoading(false);
@@ -29,48 +31,73 @@ export default function VerifyCertificatePage() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-r from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
-      <div className="w-full max-w-xl bg-white rounded-2xl shadow-xl p-8">
-        <h1 className="text-3xl font-bold text-center text-yellow-500 mb-6">Verify Certificate</h1>
+    <>
+      <Helmet>
+        <title>Verify Internship Certificate | Internfy</title>
+        <meta
+          name="description"
+          content="Verify your internship certificate at Internfy. Ensure the authenticity of your internship experience by entering your certificate number."
+        />
+        <meta
+          name="keywords"
+          content="Internfy certificate verification, internship certificate, verify certificate, validate internship, student internship, Internfy"
+        />
+        <meta property="og:title" content="Verify Certificate - Internfy" />
+        <meta
+          property="og:description"
+          content="Check and verify your internship certificate issued by Internfy. Get details such as student name, domain, duration, and award date."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.internfy.in/verification" />
+      </Helmet>
 
-        <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
-          <input
-            type="text"
-            placeholder="Enter certificate number"
-            value={certNo}
-            onChange={(e) => setCertNo(e.target.value)}
-            className="flex-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 transition"
-          />
-          <button
-            onClick={handleSearch}
-            disabled={loading}
-            className="px-6 py-2 bg-yellow-400 text-black font-semibold rounded-md hover:bg-yellow-400 transition"
-          >
-            {loading ? 'Searching...' : 'Search'}
-          </button>
-        </div>
+      <div className="min-h-screen bg-gradient-to-r from-blue-50 via-white to-blue-50 flex items-center justify-center p-4">
+        <div className="w-full max-w-xl bg-white rounded-2xl shadow-xl p-8">
+          <h1 className="text-3xl font-bold text-center text-yellow-500 mb-6">
+            Verify Certificate
+          </h1>
 
-        {error && (
-          <div className="text-red-600 text-center font-medium mb-4">
-            {error}
+          <div className="flex flex-col sm:flex-row items-center gap-4 mb-6">
+            <input
+              type="text"
+              placeholder="Enter certificate number"
+              value={certNo}
+              onChange={(e) => setCertNo(e.target.value)}
+              className="flex-1 px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:border-blue-500 transition"
+            />
+            <button
+              onClick={handleSearch}
+              disabled={loading}
+              className="px-6 py-2 bg-yellow-400 text-black font-semibold rounded-md hover:bg-yellow-400 transition"
+            >
+              {loading ? 'Searching...' : 'Search'}
+            </button>
           </div>
-        )}
 
-        {certificate && (
-          <div className="border-t pt-6">
-            <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">Certificate Details</h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
-              <Detail label="Student Name" value={certificate.studentName} />
-              <Detail label="Domain" value={certificate.domain} />
-              <Detail label="Duration" value={certificate.duration} />
-              <Detail label="Certification No" value={certificate.certificationNo} />
-              <Detail label="Starting Date" value={new Date(certificate.startingDate).toLocaleDateString()} />
-              <Detail label="Award Date" value={new Date(certificate.awardDate).toLocaleDateString()} />
+          {error && (
+            <div className="text-red-600 text-center font-medium mb-4">
+              {error}
             </div>
-          </div>
-        )}
+          )}
+
+          {certificate && (
+            <div className="border-t pt-6">
+              <h2 className="text-xl font-semibold text-gray-800 mb-4 text-center">
+                Certificate Details
+              </h2>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-gray-700">
+                <Detail label="Student Name" value={certificate.studentName} />
+                <Detail label="Domain" value={certificate.domain} />
+                <Detail label="Duration" value={certificate.duration} />
+                <Detail label="Certification No" value={certificate.certificationNo} />
+                <Detail label="Starting Date" value={new Date(certificate.startingDate).toLocaleDateString()} />
+                <Detail label="Award Date" value={new Date(certificate.awardDate).toLocaleDateString()} />
+              </div>
+            </div>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

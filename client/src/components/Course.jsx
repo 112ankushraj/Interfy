@@ -1,5 +1,4 @@
-
-import { Clock, Book, Users, ArrowRight } from "lucide-react";
+import { Clock, Book, Users } from "lucide-react";
 import { Helmet } from "react-helmet";
 
 const courses = [
@@ -8,7 +7,6 @@ const courses = [
     students: "100+",
     img: "/image/web_devlopment.webp",
   },
-
   {
     title: "Java Development Internship",
     students: "100+",
@@ -20,7 +18,7 @@ const courses = [
     img: "/image/python.webp",
   },
   {
-    title: "C ++ Programming Internship",
+    title: "C++ Programming Internship",
     students: "150+",
     img: "/image/c++.webp",
   },
@@ -29,7 +27,6 @@ const courses = [
     students: "50+",
     img: "/image/app_devlopment.webp",
   },
-
   {
     title: "Artificial Intelligence Internship",
     students: "50+",
@@ -41,20 +38,55 @@ export default function Course() {
   return (
     <>
       <Helmet>
-        <title>Course - Internfy</title>
+        <title>Courses | Internfy Internships</title>
         <meta
           name="description"
-          content="Explore Internfy's curated courses designed to boost your skills and prepare you for top internships and job opportunities."
+          content="Explore top-rated internship courses at Internfy, including Web Development, Python, Java, AI, and more. Gain experience, build projects, and grow your skills!"
         />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.internfy.in/courses" />
+
+        {/* Open Graph (OG) for better sharing */}
+        <meta property="og:title" content="Courses | Internfy Internships" />
+        <meta
+          property="og:description"
+          content="Enroll in practical internship programs in development, programming, and AI at Internfy."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.internfy.in/courses" />
+        <meta property="og:image" content="https://www.internfy.in/assets/internfy-banner.jpg" />
+
+        {/* JSON-LD structured data */}
+        <script type="application/ld+json">{`
+        {
+          "@context": "https://schema.org",
+          "@type": "ItemList",
+          "name": "Internfy Internship Courses",
+          "itemListElement": [
+            ${courses
+              .map(
+                (course, index) => `{
+              "@type": "ListItem",
+              "position": ${index + 1},
+              "name": "${course.title}",
+              "url": "https://www.internfy.in/courses"
+            }`
+              )
+              .join(",")}
+          ]
+        }
+        `}</script>
       </Helmet>
+
       <section id="courses" className="py-20 bg-gray-50">
         <div className="container mx-auto px-4">
           <p className="text-yellow-500 text-center uppercase font-semibold">
             Popular Courses
           </p>
           <h2 className="text-3xl font-bold text-center mb-10">
-            Pick A Internship To Get Started
+            Pick An Internship To Get Started
           </h2>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {courses.map(({ title, students, img }, i) => (
               <div
@@ -63,8 +95,9 @@ export default function Course() {
               >
                 <img
                   src={img}
-                  alt={title}
+                  alt={`${title} thumbnail`}
                   className="w-full h-65 object-cover"
+                  loading="lazy"
                 />
                 <div className="p-6">
                   <div className="flex items-center gap-2 mb-2 text-sm text-gray-500">
