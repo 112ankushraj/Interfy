@@ -164,7 +164,7 @@ export default function Contact() {
   return (
     <>
     <Helmet>
-        <title>Contact US - Internfy</title>
+        <title>Internfy</title>
         <meta name="description" content="Get in touch with the Internfy team for any questions, partnership opportunities, or support regarding internships." />
       </Helmet>
       <section
