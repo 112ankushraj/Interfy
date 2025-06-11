@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "../axios/AxiosInstance";
-import { Helmet } from 'react-helmet';
+import { Helmet } from "react-helmet";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -17,7 +17,6 @@ function ContactForm() {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // Inside handleSubmit
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
@@ -26,7 +25,6 @@ function ContactForm() {
       if (response.status === 200) {
         toast.success("Your message has been sent!");
 
-        // Clear the form
         setFormData({
           name: "",
           email: "",
@@ -35,10 +33,9 @@ function ContactForm() {
           message: "",
         });
 
-        // Redirect after a short delay to allow toast to show
         setTimeout(() => {
           window.location.href = "/";
-        }, 2500); // 2.5 seconds
+        }, 2500);
       } else {
         toast.error("Failed to send message.");
       }
@@ -47,12 +44,12 @@ function ContactForm() {
       toast.error("An error occurred.");
     }
   };
+
   return (
     <div className="bg-white p-10 rounded-2xl shadow-xl w-full lg:w-1/2">
       <h2 className="text-3xl font-bold mb-8 text-yellow-500">
         📝 Contact Form
       </h2>
-
       <form onSubmit={handleSubmit} className="space-y-6">
         <div>
           <label className="block font-semibold text-lg">Name</label>
@@ -65,7 +62,6 @@ function ContactForm() {
             className="w-full mt-1 px-5 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
-
         <div>
           <label className="block font-semibold text-lg">Email Address</label>
           <input
@@ -76,7 +72,6 @@ function ContactForm() {
             className="w-full mt-1 px-5 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
-
         <div>
           <label className="block font-semibold text-lg">WhatsApp Number</label>
           <input
@@ -88,7 +83,6 @@ function ContactForm() {
             className="w-full mt-1 px-5 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
-
         <div>
           <label className="block font-semibold text-lg">Phone Number</label>
           <input
@@ -99,7 +93,6 @@ function ContactForm() {
             className="w-full mt-1 px-5 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
           />
         </div>
-
         <div>
           <label className="block font-semibold text-lg">Message</label>
           <textarea
@@ -110,7 +103,6 @@ function ContactForm() {
             className="w-full mt-1 px-5 py-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-yellow-400"
           ></textarea>
         </div>
-
         <div>
           <button
             type="submit"
@@ -124,49 +116,87 @@ function ContactForm() {
   );
 }
 
-function CompnayInfo(){
+function CompanyInfo() {
   return (
     <div className="bg-white p-10 rounded-2xl shadow-xl w-full lg:w-1/2">
-    <h2 className="text-3xl font-bold mb-8 text-yellow-500">
-      📘 More Information
-    </h2>
-    <ul className="space-y-6 text-lg">
-      <li className="flex items-start gap-3">
-        <span className="text-2xl">📍</span>
-        <div>
-          <h3 className="font-semibold text-xl">Address</h3>
-          <p>Patna, Bihar, India</p>
-        </div>
-      </li>
-
-      <li className="flex items-start gap-3">
-        <span className="text-2xl">📞</span>
-        <div>
-          <h3 className="font-semibold text-xl">Contact Number</h3>
-          <p>+91 8757614978</p>
-        </div>
-      </li>
-
-      <li className="flex items-start gap-3">
-        <span className="text-2xl">✉</span>
-        <div>
-          <h3 className="font-semibold text-xl">Email ID</h3>
-          <p>internfy.in@gmail.com</p>
-        </div>
-      </li>
-    </ul>
-  </div>
-  )
+      <h2 className="text-3xl font-bold mb-8 text-yellow-500">
+        📘 More Information
+      </h2>
+      <ul className="space-y-6 text-lg">
+        <li className="flex items-start gap-3">
+          <span className="text-2xl">📍</span>
+          <div>
+            <h3 className="font-semibold text-xl">Address</h3>
+            <p>Patna, Bihar, India</p>
+          </div>
+        </li>
+        <li className="flex items-start gap-3">
+          <span className="text-2xl">📞</span>
+          <div>
+            <h3 className="font-semibold text-xl">Contact Number</h3>
+            <p>+91 8757614978</p>
+          </div>
+        </li>
+        <li className="flex items-start gap-3">
+          <span className="text-2xl">✉</span>
+          <div>
+            <h3 className="font-semibold text-xl">Email ID</h3>
+            <p>internfy.in@gmail.com</p>
+          </div>
+        </li>
+      </ul>
+    </div>
+  );
 }
 
 export default function Contact() {
-
   return (
     <>
-    <Helmet>
+      <Helmet>
         <title>Internfy</title>
-        <meta name="description" content="Get in touch with the Internfy team for any questions, partnership opportunities, or support regarding internships." />
+        <meta
+          name="description"
+          content="Contact Internfy for internship inquiries, support, and collaboration opportunities. We'd love to hear from you."
+        />
+        <meta name="robots" content="index, follow" />
+        <link rel="canonical" href="https://www.internfy.in/contact" />
+
+        {/* Open Graph for social sharing */}
+        <meta property="og:title" content="Contact Us | Internfy" />
+        <meta
+          property="og:description"
+          content="Reach out to Internfy for internship-related queries or partnership proposals."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://www.internfy.in/contact" />
+        <meta
+          property="og:image"
+          content="https://www.internfy.in/assets/internfy-banner.jpg"
+        />
+
+        {/* JSON-LD Structured Data */}
+        <script type="application/ld+json">{`
+          {
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Internfy Contact Us",
+            "url": "https://www.internfy.in/contact",
+            "mainEntity": {
+              "@type": "Organization",
+              "name": "Internfy",
+              "url": "https://www.internfy.in",
+              "contactPoint": {
+                "@type": "ContactPoint",
+                "telephone": "+91-8757614978",
+                "contactType": "Customer Support",
+                "areaServed": "IN",
+                "availableLanguage": ["English", "Hindi"]
+              }
+            }
+          }
+        `}</script>
       </Helmet>
+
       <section
         id="contacts"
         className="py-20 bg-gradient-to-br from-yellow-100 via-yellow-50 to-white text-gray-800"
@@ -177,8 +207,8 @@ export default function Contact() {
           </h1>
 
           <div className="flex flex-col lg:flex-row gap-10">
-            <CompnayInfo />
-            <ContactForm  />
+            <CompanyInfo />
+            <ContactForm />
           </div>
         </div>
       </section>
