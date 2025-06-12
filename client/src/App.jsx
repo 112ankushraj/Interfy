@@ -7,11 +7,12 @@ import CreateCertificate from "./pages/Certificate/CreateCertificate";
 
 import Home from "./pages/Home";
 import Navbar from "./components/Navbar";
-import Course from "./components/Course";
+import CourseList from "./components/Course";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer"
 import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CourseDetail from "./components/CourseDetail";
 
 
 function App() {
@@ -23,8 +24,9 @@ function App() {
    
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/internship" element={<Course />} />
+          <Route path="/course" element={<CourseList />} />
           <Route path="/verification" element={<VerifyCertificate />} />
+          <Route path="/course/:courseSlug" element={<CourseDetail />} /> 
           <Route path="/contactus" element={<Contact />} />
           <Route path="/about" element={<About />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />

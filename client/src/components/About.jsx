@@ -1,6 +1,6 @@
 import React from "react";
 import { CheckCircle } from "lucide-react";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function About() {
   return (
