@@ -30,6 +30,11 @@ const courses = [
       students: "50+",
       img: "/image/ai.webp",
     },
+        {
+      title: "UI & UX",
+      students: "50+",
+      img: "/image/uiux.webp",
+    },
   ];
   
   
