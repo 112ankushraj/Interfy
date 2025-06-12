@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import axios from "../axios/AxiosInstance";
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 function ContactForm() {
   const [formData, setFormData] = useState({
