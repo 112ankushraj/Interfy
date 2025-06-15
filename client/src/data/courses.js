@@ -6,7 +6,7 @@ const courses = [
       img: "/image/web_devlopment.webp",
     },
     {
-      title: "Java Development Internship",
+      title: "Java Programming Internship",
       students: "100+",
       img: "/image/java.webp",
     },
