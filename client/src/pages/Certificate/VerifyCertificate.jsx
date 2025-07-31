@@ -90,8 +90,8 @@ export default function VerifyCertificatePage() {
                 <Detail label="Domain" value={certificate.domain} />
                 <Detail label="Duration" value={certificate.duration} />
                 <Detail label="Certification No" value={certificate.certificationNo} />
-                <Detail label="Starting Date" value={new Date(certificate.startingDate).toLocaleDateString()} />
-                <Detail label="Award Date" value={new Date(certificate.awardDate).toLocaleDateString()} />
+                <Detail label="Starting Date" value={new Date(certificate.startingDate).toLocaleDateString('en-GB')} />
+                <Detail label="Award Date" value={new Date(certificate.awardDate).toLocaleDateString('en-GB')} />
               </div>
             </div>
           )}
