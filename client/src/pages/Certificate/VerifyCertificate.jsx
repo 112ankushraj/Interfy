@@ -23,7 +23,7 @@ export default function VerifyCertificatePage() {
       const res = await axios.get(`/certificate/verify/${certNo}`);
       setCertificate(res.data);
     } catch (err) {
-      
+     console.log(err) 
       setError('No certificate found with this number.');
     } finally {
       setLoading(false);
