@@ -34,17 +34,12 @@ pipeline {
 
         stage('Deploy to Nginx') {
             steps {
-                // Clean deploy directory
-                sh 'sudo rm -rf $DEPLOY_DIR/*'
-
-                // Copy build output
-                sh 'sudo cp -r client/dist/* $DEPLOY_DIR/'
-
-                // Reload Nginx to reflect changes
-                sh 'sudo /bin/systemctl reload nginx'
+                sh 'sudo -S rm -rf $DEPLOY_DIR/*'
+                sh 'sudo -S cp -r client/dist/* $DEPLOY_DIR/'
+                sh 'sudo -S /bin/systemctl reload nginx'
             }
         }
-    }
+}
 
     post {
         success {
